@@ -39,7 +39,8 @@ public class Hangman extends ConsoleProgram {
             currentForm = currentForm.concat("-");
         }
 
-        println(currentForm);
+        //println(currentForm);
+        for 
     }
 
 
