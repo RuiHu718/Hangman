@@ -31,8 +31,7 @@ public class Hangman extends ConsoleProgram {
     // chooses random word as target
     // uses simple hangmanLexicon stud for now
     private String chooseRandomWord() {
-        String word = hangmanLex.getWord(2);
-        return word;
+        return  hangmanLex.getWord(2);
     }
 
 
