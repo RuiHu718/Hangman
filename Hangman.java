@@ -31,15 +31,18 @@ public class Hangman extends ConsoleProgram {
     // chooses random word as target
     // uses simple hangmanLexicon stud for now
     private String chooseRandomWord() {
-        hangmanLex = new HangmanLexicon();
-        return  hangmanLex.getWord(2);
+        int i = rgen.nextInt(0, hangmanLex.getWordCount()-1);
+        return  hangmanLex.getWord(i);
     }
 
 
 
-    //Private instance variables
+    // private instance variables
 
     // object to get random word
-    private HangmanLexicon hangmanLex;
+    private HangmanLexicon hangmanLex = new HangmanLexicon();
+
+    // to get random word
+    private RandomGenerator rgen = RandomGenerator.getInstance();
 
 }
