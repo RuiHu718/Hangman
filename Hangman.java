@@ -33,6 +33,7 @@ public class Hangman extends ConsoleProgram {
 
         String currentForm = initCurrentForm();
         String pickedLetter;
+        int count = 8;
         
         while (true) {
             pickedLetter = getUserInput();
@@ -41,6 +42,14 @@ public class Hangman extends ConsoleProgram {
             if (targetWord.indexOf(pickedLetter.charAt(0)) == -1) {
                 println("There are no " + pickedLetter + " in the word.");
                 println("The word now looks like this: " + currentForm);
+                count--;
+                if (count == 0) {
+                    println("You are completely hung.");
+                    println("The word was: " + targetWord);
+                    break;
+                } else {
+                    println("You have " + count + " guesses left.");
+                }
             } else {
                 
                 //currentForm = updateTarget(currentForm, pickedLetter);
