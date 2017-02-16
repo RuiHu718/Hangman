@@ -25,8 +25,9 @@ public class Hangman extends ConsoleProgram {
 
     // sets up the game by getting a random word
     private void setupGame() {
-        targetWord = chooseRandomWord();
-        println(targetWord);
+        //targetWord = chooseRandomWord();
+        targetWord = "FUZZY";
+        //println(targetWord);
 
     }
 
@@ -34,7 +35,9 @@ public class Hangman extends ConsoleProgram {
     //
     private void playGame() {
 
+        println("Welcome to Hangman!");
         String currentForm = initCurrentForm();
+        println ("The word now looks like this: " + currentForm);
         String pickedLetter;
         int count = 8;          // player has eight chances
         
