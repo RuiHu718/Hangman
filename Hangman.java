@@ -14,6 +14,11 @@ import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
 
+    public void init() {
+        canvas = new HangmanCanvas();
+        add(canvas);
+    }
+
     public void run() {
         setupGame();
         playGame();
@@ -103,6 +108,7 @@ public class Hangman extends ConsoleProgram {
 
         String letter = readLine();
 
+        // program will break if enter "enter" right away, how to catch this?
         if ((! Character.isLetter(letter.charAt(0))) || letter.length() > 1) {
             println("Illegal input, input should be a single letter so try again.");
             letter = readLine();
@@ -142,5 +148,8 @@ public class Hangman extends ConsoleProgram {
 
     // random word choosen to be the game target
     private String targetWord;
+
+    // canvas to draw on
+    private HangmanCanvas canvas;
 
 }
