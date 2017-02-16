@@ -15,7 +15,10 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
         setupGame();
-        playGame();
+        //playGame();
+
+        String test = updateTarget("--------", "COMPUTER", "C");
+        println(test);
         
     }
 
@@ -81,11 +84,14 @@ public class Hangman extends ConsoleProgram {
             if (current.charAt(i) == '-') {
                 if (letter.equals(target.charAt(i))) {
                     result = result + letter;
+                    println("1");
                 } else {
                     result = result + "-";
+                    println("2");
                 }
             } else {
                 result = result + Character.toString(current.charAt(i));
+                println(3);
             }
         }
 
