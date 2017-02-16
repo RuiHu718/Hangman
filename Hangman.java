@@ -80,8 +80,10 @@ public class Hangman extends ConsoleProgram {
         for (int i = 0; i < current.length(); i++) {
             if (letter.charAt(0) == target.charAt(i)) {
                 result = result + letter;
-            } else {
+            } else if (current.charAt(i) != '-') {
                 result = result + "-";
+            } else {
+                continue;
             }
         }
 
