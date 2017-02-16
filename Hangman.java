@@ -149,7 +149,7 @@ public class Hangman extends ConsoleProgram {
     // random word choosen to be the game target
     private String targetWord;
 
-    // canvas to draw on
+    // canvas to draw 
     private HangmanCanvas canvas;
 
 }
