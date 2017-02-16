@@ -78,12 +78,14 @@ public class Hangman extends ConsoleProgram {
     private String updateTarget(String current, String target, String letter) {
         String result = "";
         for (int i = 0; i < current.length(); i++) {
-            if (letter.charAt(0) == target.charAt(i)) {
-                result = result + letter;
-            } else if (current.charAt(i) != '-') {
-                result = result + "-";
+            if (! Character.isLetter(current.charAt(i))) {
+                if (letter.equals(target.charAt(i))) {
+                    result = result + letter;
+                } else {
+                    result = result + "-";
+                }
             } else {
-                continue;
+                result = result + Character.toString(current.charAt(i));
             }
         }
 
