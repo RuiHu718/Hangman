@@ -26,7 +26,7 @@ public class Hangman extends ConsoleProgram {
     // sets up the game by getting a random word
     private void setupGame() {
         //targetWord = chooseRandomWord();
-        targetWord = "FUZZY";
+        targetWord = "COMPUTER";
         //println(targetWord);
 
     }
