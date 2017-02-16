@@ -33,12 +33,13 @@ public class Hangman extends ConsoleProgram {
 
         String currentForm = initCurrentForm();
         String pickedLetter;
-        int count = 8;
+        int count = 8;          // player has eight chances
         
         while (true) {
             pickedLetter = getUserInput();
             println ("Your guess: " + pickedLetter);
 
+            // check whether the player picked a correct word
             if (targetWord.indexOf(pickedLetter.charAt(0)) == -1) {
                 println("There are no " + pickedLetter + " in the word.");
                 println("The word now looks like this: " + currentForm);
@@ -51,41 +52,42 @@ public class Hangman extends ConsoleProgram {
                     println("You have " + count + " guesses left.");
                 }
             } else {
-                
-                //currentForm = updateTarget(currentForm, pickedLetter);
+                // if a correct letter has been guessed before, simple ignore
+                if (currentForm.indexOf(pickedLetter.charAt(0)) != -1) {
+                    println("You have picked this letter before, pick a different one then.");
+                    continue;
+                } else {
+                    println ("Your guess: " + pickedLetter);
+                    println("That guess is correct.");
+                    currentForm = updateTarget(currentForm, targetWord, pickedLetter);
+                    if (currentForm.equals(targetWord)) {
+                        println("You guessed the word: " + targetWord);
+                        println("You win.");
+                        break;
+                    } else {
+                        println("The word now looks like this: " + currentForm);
+                        println("You have " + count + " guesses left.");
+                    }
+                }
             }
-
-            
         }
-
-
-        
-        // for (int j = 8; j > 0; j--) { // player has eight chances
-
-        //     println("You have " + j + " guesses left.");
-
-        //     String pickedLetter = readLine();
-        //     pickedLetter = pickedLetter.toUpperCase();
-        //     // there is a problem here, what if use type in two chars more than once?
-        //     if (pickedLetter.length() > 1) {
-        //         println("Illegal input, input should be a single letter so try again");
-        //         pickedLetter = readLine();
-        //         pickedLetter = pickedLetter.toUpperCase();
-        //     }
-        //     println("Your guess: " + pickedLetter);
-
-        //     // Checks whether the picked letter is part of target word
-        //     // Note that pickedletter is string type so have to convert to char first
-        //     if (targetWord.indexOf(pickedLetter.charAt(0)) == -1) {
-        //         println("There are no " + pickedLetter + " in the word.");
-        //         println("The word now looks like this: " + currentForm);
-        //     } else {
-                
-        //         //currentForm = updateTarget(currentForm, pickedLetter);
-        //     }
-        // }
     }
 
+
+    // update the string in progress accordingly, replace '-' with correct letters
+    private String updateTarget(String current, String target, String letter) {
+        String result = "";
+        for (int i = 0; i < current.length(); i++) {
+            if (letter.charAt(0) == target.charAt(i)) {
+                result = result + letter;
+            } else {
+                continue;
+            }
+        }
+
+        return result;
+    }
+    
 
     // gets user input of a single letter
     // check for input errors
