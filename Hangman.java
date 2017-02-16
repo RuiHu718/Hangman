@@ -40,6 +40,7 @@ public class Hangman extends ConsoleProgram {
         println ("The word now looks like this: " + currentForm);
         String pickedLetter;
         int count = 8;          // player has eight chances
+        println("You have " + count + " guesses left." );
         
         while (true) {
             pickedLetter = getUserInput();
