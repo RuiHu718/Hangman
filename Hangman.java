@@ -54,6 +54,7 @@ public class Hangman extends ConsoleProgram {
                 if (count == 0) {
                     println("You are completely hung.");
                     println("The word was: " + targetWord);
+                    println("You lose.");
                     break;
                 } else {
                     println("You have " + count + " guesses left.");
