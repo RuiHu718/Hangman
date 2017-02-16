@@ -103,7 +103,7 @@ public class Hangman extends ConsoleProgram {
 
         String letter = readLine();
 
-        if (letter.length() > 1) {
+        if ((! Character.isLetter(letter.charAt(0))) || letter.length() > 1) {
             println("Illegal input, input should be a single letter so try again.");
             letter = readLine();
         }
