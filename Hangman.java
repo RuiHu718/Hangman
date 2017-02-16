@@ -40,24 +40,28 @@ public class Hangman extends ConsoleProgram {
 
         //println(currentForm);
         for (int j = 8; j > 0; j--) { // player has eight chances
+
             println("You have " + j + " guesses left.");
 
             String pickedLetter = readLine();
+            pickedLetter = pickedLetter.toUpperCase();
+            // there is a problem here, what if use type in two chars more than once?
             if (pickedLetter.length() > 1) {
                 println("Illegal input, input should be a single letter so try again");
                 pickedLetter = readLine();
+                pickedLetter = pickedLetter.toUpperCase();
             }
             println("Your guess: " + pickedLetter);
 
             // Checks whether the picked letter is part of target word
             // Note that pickedletter is string type so have to convert to char first
-            // if (targetWord.indexOf(pickedLetter.charAt(0)) == -1) {
-            //     println("There are no " + pickedLetter + " in the word.");
-            //     println("The word now looks like this: " + currentForm);
-            // } else {
+            if (targetWord.indexOf(pickedLetter.charAt(0)) == -1) {
+                println("There are no " + pickedLetter + " in the word.");
+                println("The word now looks like this: " + currentForm);
+            } else {
                 
-            //     currentForm = updateTarget(currentForm, pickedLetter);
-            // }
+                //currentForm = updateTarget(currentForm, pickedLetter);
+            }
         }
     }
 
