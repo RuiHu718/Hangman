@@ -17,22 +17,15 @@ public class Hangman extends ConsoleProgram {
         setupGame();
         playGame();
 
-        // String test = updateTarget("--------", "COMPUTER", "C");
-        // println(test);
-        
     }
 
 
     // sets up the game by getting a random word
     private void setupGame() {
-        //targetWord = chooseRandomWord();
-        targetWord = "COMPUTER";
-        //println(targetWord);
-
+        targetWord = chooseRandomWord();
     }
 
 
-    //
     private void playGame() {
 
         println("Welcome to Hangman!");
@@ -42,6 +35,7 @@ public class Hangman extends ConsoleProgram {
         int count = 8;          // player has eight chances
         println("You have " + count + " guesses left." );
         
+        // some methods work on string but not char and vice versa, be careful
         while (true) {
             pickedLetter = getUserInput();
             println ("Your guess: " + pickedLetter);
@@ -63,9 +57,8 @@ public class Hangman extends ConsoleProgram {
                 // if a correct letter has been guessed before, simple ignore
                 if (currentForm.indexOf(pickedLetter.charAt(0)) != -1) {
                     println("You have picked this letter before, pick a different one then.");
-                    continue;
+                    // continue;
                 } else {
-                    //println ("Your guess: " + pickedLetter);
                     println("That guess is correct.");
                     currentForm = updateTarget(currentForm, targetWord, pickedLetter);
                     if (currentForm.equals(targetWord)) {
@@ -82,21 +75,20 @@ public class Hangman extends ConsoleProgram {
     }
 
 
-    // update the string in progress accordingly, replace '-' with correct letters
+    /* update the string in progress accordingly, replace '-' with correct letters */
     private String updateTarget(String current, String target, String letter) {
+
         String result = "";
+
         for (int i = 0; i < current.length(); i++) {
             if (current.charAt(i) == '-') {
                 if (letter.charAt(0) == target.charAt(i)) {
                     result = result + letter;
-                    //println("1");
                 } else {
                     result = result + "-";
-                    //println("2");
                 }
             } else {
                 result = result + Character.toString(current.charAt(i));
-                //println(3);
             }
         }
 
@@ -107,11 +99,14 @@ public class Hangman extends ConsoleProgram {
     // gets user input of a single letter
     // check for input errors
     private String getUserInput() {
+
         String letter = readLine();
+
         if (letter.length() > 1) {
             println("Illegal input, input should be a single letter so try again.");
             letter = readLine();
         }
+
         return letter.toUpperCase();
     }
     
@@ -130,15 +125,12 @@ public class Hangman extends ConsoleProgram {
     }
 
 
-    
-
     // chooses random word as target
     // uses simple hangmanLexicon stud for now
     private String chooseRandomWord() {
         int i = rgen.nextInt(0, hangmanLex.getWordCount()-1); // is this correct on the edge?
         return  hangmanLex.getWord(i);
     }
-
 
 
     // object to get random word
