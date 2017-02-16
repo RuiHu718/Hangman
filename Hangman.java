@@ -57,7 +57,7 @@ public class Hangman extends ConsoleProgram {
                     println("You have picked this letter before, pick a different one then.");
                     continue;
                 } else {
-                    println ("Your guess: " + pickedLetter);
+                    //println ("Your guess: " + pickedLetter);
                     println("That guess is correct.");
                     currentForm = updateTarget(currentForm, targetWord, pickedLetter);
                     if (currentForm.equals(targetWord)) {
@@ -81,7 +81,7 @@ public class Hangman extends ConsoleProgram {
             if (letter.charAt(0) == target.charAt(i)) {
                 result = result + letter;
             } else {
-                continue;
+                result = result + "-";
             }
         }
 
