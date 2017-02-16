@@ -14,7 +14,6 @@ import java.awt.*;
 public class Hangman extends ConsoleProgram {
 
     public void run() {
-	
         setupGame();
         playGame();
         
@@ -32,15 +31,21 @@ public class Hangman extends ConsoleProgram {
     //
     private void playGame() {
         int wordLen = targetWord.length();
+        String currentForm = "";
 
         // sets up the initial representation of the unguessed string
-        String currentForm = "";
         for (int i = 0; i < wordLen; i++) {
             currentForm = currentForm.concat("-");
         }
 
         //println(currentForm);
-        for 
+        for (int j = 8; j > 1; j--) { // player has eight chances
+            println("You have " + j + " guesses left.");
+
+            String pickedLetter = readLine();
+            // user input checking logic here
+            println("Your guess: " + pickedLetter);
+        }
     }
 
 
