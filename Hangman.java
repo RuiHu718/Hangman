@@ -82,7 +82,7 @@ public class Hangman extends ConsoleProgram {
         String result = "";
         for (int i = 0; i < current.length(); i++) {
             if (current.charAt(i) == '-') {
-                if (letter.equals(target.charAt(i))) {
+                if (letter.charAt(0) == target.charAt(i)) {
                     result = result + letter;
                     println("1");
                 } else {
