@@ -77,6 +77,9 @@ public class HangmanCanvas extends GCanvas {
                                   getWidth()/2+UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD);
         add(upperrightarm);
 
+        lowerrightarm = new GLine(getWidth()/2+UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
+                                  getWidth()/2+UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD+LOWER_ARM_LENGTH);
+        add(lowerrightarm);
     }
         
     
