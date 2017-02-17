@@ -5,11 +5,10 @@
  * first try
  */
 
-import java.awt.Color;
-
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
+import java.awt.*;
 
 public class HangmanCanvas extends GraphicsProgram {
 
@@ -26,8 +25,9 @@ public class HangmanCanvas extends GraphicsProgram {
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
 
-            beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
-                                   getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
+            beam = new GLine (getWidth()/2, getHeight()/2, getWidth()/2 + 10, getHeight()/2);
+            // beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
+            //                        getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
             add(beam);
             beam.setVisible(true);
             beam.setColor(Color.BLACK);
