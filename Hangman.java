@@ -14,7 +14,6 @@ import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
 
-    // need to commit
     public void init() {
         canvas = new HangmanCanvas();
         add(canvas);
