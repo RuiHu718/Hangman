@@ -10,7 +10,7 @@ import acm.program.*;
 import acm.util.*;
 import java.awt.*;
 
-public class HangmanCanvas extends GraphicsProgram {
+public class HangmanCanvas extends GCanvas {
 
     // for testing purpose
     public void run() {
@@ -28,7 +28,7 @@ public class HangmanCanvas extends GraphicsProgram {
     
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
-            println("hello");
+            //println("hello");
             beam = new GLine (0, 0, 100, 100);
 
             // beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
