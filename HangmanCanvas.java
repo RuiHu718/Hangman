@@ -25,7 +25,7 @@ public class HangmanCanvas extends GCanvas {
             current = new GLabel("", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+50); // 50 here is arbitrary
             add(current);
 
-            guessed = new GLabel("Test", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+100);
+            guessed = new GLabel("", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+100);
             add(guessed);
             
             // drawHead();
