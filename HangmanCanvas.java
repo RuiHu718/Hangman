@@ -5,6 +5,8 @@
  * first try
  */
 
+import java.awt.Color;
+
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
@@ -28,6 +30,7 @@ public class HangmanCanvas extends GraphicsProgram {
                                    getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
             add(beam);
             beam.setVisible(true);
+            beam.setColor(Color.BLACK);
 
 	}
 
