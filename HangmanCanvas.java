@@ -9,14 +9,14 @@ import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
 
-public class HangmanCanvas extends GCanvas {
+public class HangmanCanvas extends GraphicsProgram {
 
     // for testing purpose
-    // public void run() {
-    //     HangmanCanvas canvas = new HangmanCanvas();
-    //     add(canvas);
-    //     canvas.reset();
-    // }
+    public void run() {
+        HangmanCanvas canvas = new HangmanCanvas();
+        add(canvas);
+        canvas.reset();
+    }
 
 
 
