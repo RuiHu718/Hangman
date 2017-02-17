@@ -34,7 +34,7 @@ public class HangmanCanvas extends GCanvas {
             // beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
             //                        getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
 
-            canvas.add(beam);
+            add(beam);
 
 
 
