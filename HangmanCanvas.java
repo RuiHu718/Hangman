@@ -14,13 +14,13 @@ public class HangmanCanvas extends GraphicsProgram {
 
     // for testing purpose
     public void run() {
-        // canvas = new HangmanCanvas();
-        // add(canvas);
-        // canvas.reset();
+         canvas = new HangmanCanvas();
+         add(canvas);
+         canvas.reset();
         // println(canvas.getElementCount());
 
-        beam = new GLine(0, 0, 100, 100);
-        add(beam);
+        //beam = new GLine(0, 0, 100, 100);
+        //add(beam);
     }
 
 
@@ -29,14 +29,13 @@ public class HangmanCanvas extends GraphicsProgram {
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
             println("hello");
-            beam = new GLine (50, 50, 100, 100);
-            beam2 = new GLine (60, 60, 110, 110);
+            beam = new GLine (0, 0, 100, 100);
+
             // beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
             //                        getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
-            beam.setVisible(true);
-            beam.setColor(Color.BLACK);
+
             add(beam);
-            add(beam2);
+
 
 
 	}
@@ -64,7 +63,7 @@ public class HangmanCanvas extends GraphicsProgram {
 /* Instance variables */
     private HangmanCanvas canvas;
     private GLine beam;
-    private GLine beam2;;
+
     
 /* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
