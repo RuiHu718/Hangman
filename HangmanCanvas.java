@@ -73,7 +73,7 @@ public class HangmanCanvas extends GCanvas {
             // }
 
             if (getElementCount() == 5) drawHead();
-            if (getElementCount() == 6) drawBody();
+            if (getElementCount() == 7) drawBody();
 	}
 
 
