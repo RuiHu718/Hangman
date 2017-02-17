@@ -72,8 +72,8 @@ public class HangmanCanvas extends GCanvas {
             // case 12: drawRightFoot();
             // }
 
-            if (getElementCount() == 5) drawHead();
-            if (getElementCount() == 7) drawBody();
+            if (guessedLetters.length() == 1) drawHead();
+            if (guessedLetters.length() == 2) drawBody();
 	}
 
 
