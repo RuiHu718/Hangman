@@ -64,10 +64,10 @@ public class HangmanCanvas extends GCanvas {
     private void drawLeftArm() {
         upperleftarm = new GLine(getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
                               getWidth()/2, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD);
-        add(upper_arm_length);
+        add(upperleftarm);
 
         lowerleftarm = new GLine(getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
-                                 getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD+LOWER_ARM_LENGHT);
+                                 getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD+LOWER_ARM_LENGTH);
         add(lowerleftarm);
     }
         
