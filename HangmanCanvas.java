@@ -14,7 +14,7 @@ public class HangmanCanvas extends GraphicsProgram {
 
     // for testing purpose
     public void run() {
-        HangmanCanvas canvas = new HangmanCanvas();
+        canvas = new HangmanCanvas();
         add(canvas);
         canvas.reset();
         println(canvas.getElementCount());
@@ -32,7 +32,7 @@ public class HangmanCanvas extends GraphicsProgram {
             //                        getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
             beam.setVisible(true);
             beam.setColor(Color.BLACK);
-            add(beam);
+            canvas.add(beam);
             add(beam2);
 
 
@@ -59,6 +59,7 @@ public class HangmanCanvas extends GraphicsProgram {
 
 
 /* Instance variables */
+    private HangmanCanvas canvas;
     private GLine beam;
     private GLine beam2;;
     
