@@ -21,14 +21,16 @@ public class HangmanCanvas extends GCanvas {
             rope = new GLine(getWidth()/2, 10, getWidth()/2, 10 + ROPE_LENGTH);
             add(rope);
 
-            drawHead();
-            drawBody();
-            drawLeftArm();
-            drawRightArm();
-            drawLeftLeg();
-            drawRightLeg();
-            drawLeftFoot();
-            drawRightFoot();
+            current = new GLabel("Test", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+50);
+            add(current);
+            // drawHead();
+            // drawBody();
+            // drawLeftArm();
+            // drawRightArm();
+            // drawLeftLeg();
+            // drawRightLeg();
+            // drawLeftFoot();
+            // drawRightFoot();
 	}
 
 /**
@@ -38,6 +40,7 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void displayWord(String word) {
 		/* You fill this in */
+
 	}
 
 /**
@@ -130,6 +133,8 @@ public class HangmanCanvas extends GCanvas {
         private GLine rightleg;
         private GLine leftfoot;
         private GLine rightfoot;
+        private GLabel current;
+        private GLabel guessed;
 
     
 /* Constants for the simple version of the picture (in pixels) */
