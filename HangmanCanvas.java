@@ -74,6 +74,12 @@ public class HangmanCanvas extends GCanvas {
 
             if (guessedLetters.length() == 1) drawHead();
             if (guessedLetters.length() == 2) drawBody();
+            if (guessedLetters.length() == 3) drawLeftArm();
+            if (guessedLetters.length() == 4) drawRightArm();
+            if (guessedLetters.length() == 5) drawLeftLeg();
+            if (guessedLetters.length() == 6) drawRightLeg();
+            if (guessedLetters.length() == 7) drawLeftFoot();
+            if (guessedLetters.length() == 8) drawRightFoot();
 	}
 
 
