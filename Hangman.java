@@ -21,6 +21,7 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
         canvas.reset();
+        //need to commit
         //setupGame();
         //playGame();
 
