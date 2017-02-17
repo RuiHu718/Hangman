@@ -7,6 +7,7 @@
 
 import acm.graphics.*;
 import acm.program.*;
+import acm.util.*;
 
 public class HangmanCanvas extends GCanvas {
 
@@ -22,9 +23,11 @@ public class HangmanCanvas extends GCanvas {
     
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
+
             GLine beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
                                    getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
             add(beam);
+
 	}
 
 /**
