@@ -70,7 +70,7 @@ public class HangmanCanvas extends GCanvas {
             case 10: drawLeftLeg();
             case 11: drawLeftFoot();
             case 12: drawRightFoot();
-            };
+            }
 	}
 
 
