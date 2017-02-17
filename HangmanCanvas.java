@@ -9,9 +9,21 @@ import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
 
+    // for testing purpose
+    public void run() {
+        HangmanCanvas canvas = new HangmanCanvas();
+        add(canvas);
+        canvas.reset();
+    }
+
+
+
+    
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
-		/* You fill this in */
+            GLine beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
+                                   getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
+            add(beam);
 	}
 
 /**
