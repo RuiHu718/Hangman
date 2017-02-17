@@ -94,7 +94,9 @@ public class HangmanCanvas extends GCanvas {
     }
 
     private void drawRightLeg() {
-
+        righthip = new GLine(getWidth()/2, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH,
+                             getWidth()/2+HIP_LENGTH, getWidth()/2, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH);
+        add(righthip);
     }
 
     private void drawLeftFoot() {
