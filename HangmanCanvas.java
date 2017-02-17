@@ -61,16 +61,19 @@ public class HangmanCanvas extends GCanvas {
             guessed.setLabel(guessedLetters);
 
             // the trick here is to keep track how many objects exists on the canvas so you know which part to draw next
-            switch (getElementCount()) {
-            case 5: drawHead();
-            case 6: drawBody();
-            case 7: drawLeftArm();
-            case 8: drawRightArm();
-            case 9: drawRightLeg();
-            case 10: drawLeftLeg();
-            case 11: drawLeftFoot();
-            case 12: drawRightFoot();
-            }
+            // switch (getElementCount()) {
+            // case 5: drawHead();
+            // case 6: drawBody();
+            // case 7: drawLeftArm();
+            // case 8: drawRightArm();
+            // case 9: drawRightLeg();
+            // case 10: drawLeftLeg();
+            // case 11: drawLeftFoot();
+            // case 12: drawRightFoot();
+            // }
+
+            if (getElementCount() == 5) drawHead();
+            if (getElementCount() == 6) drawBody();
 	}
 
 
