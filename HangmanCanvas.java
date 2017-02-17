@@ -17,6 +17,7 @@ public class HangmanCanvas extends GraphicsProgram {
         HangmanCanvas canvas = new HangmanCanvas();
         add(canvas);
         canvas.reset();
+        println(canvas.getElementCount());
     }
 
 
@@ -31,6 +32,7 @@ public class HangmanCanvas extends GraphicsProgram {
             add(beam);
             beam.setVisible(true);
             beam.setColor(Color.BLACK);
+
 
 	}
 
