@@ -21,6 +21,8 @@ public class HangmanCanvas extends GCanvas {
             add(scaffold);
             rope = new GLine(getWidth()/2, 10, getWidth()/2, 10 + ROPE_LENGTH);
             add(rope);
+
+            drawHead();
 	}
 
 /**
@@ -43,10 +45,23 @@ public class HangmanCanvas extends GCanvas {
 	}
 
 
+/**
+ * The following methods draw hangman body parts
+ */
+    private void drawHead() {
+        head = new GOval(getWidth()/2 - HEAD_RADIUS, 10 + ROPE_LENGTH, HEAD_RADIUS, HEAD_RADIUS);
+        add(head);
+        
+
+    }
+        
+    
+
 /* Instance variables */
-    private GLine beam;
-    private GLine scaffold;
-    private GLine rope;
+        private GLine beam;
+        private GLine scaffold;
+        private GLine rope;
+        private GOval head;
 
     
 /* Constants for the simple version of the picture (in pixels) */
