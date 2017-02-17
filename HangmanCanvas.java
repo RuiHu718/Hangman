@@ -14,6 +14,7 @@ public class HangmanCanvas extends GCanvas {
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
 
+            // need to commit
             beam = new GLine (getWidth()/2, 10, getWidth()/2 - BEAM_LENGTH, 10); // num 10 is arbitrary here, will adjust later
             add(beam);
             scaffold = new GLine(getWidth()/2 - BEAM_LENGTH, 10, getWidth()/2 - BEAM_LENGTH, 10 + SCAFFOLD_HEIGHT);
