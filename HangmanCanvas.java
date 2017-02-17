@@ -14,10 +14,13 @@ public class HangmanCanvas extends GraphicsProgram {
 
     // for testing purpose
     public void run() {
-        canvas = new HangmanCanvas();
-        add(canvas);
-        canvas.reset();
-        println(canvas.getElementCount());
+        // canvas = new HangmanCanvas();
+        // add(canvas);
+        // canvas.reset();
+        // println(canvas.getElementCount());
+
+        beam = new GLine(0, 0, 100, 100);
+        add(beam);
     }
 
 
