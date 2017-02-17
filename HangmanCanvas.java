@@ -11,14 +11,13 @@ import acm.graphics.*;
 public class HangmanCanvas extends GCanvas {
 
 
-    
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
-            //println("hello");
-            beam = new GLine (0, 0, 100, 100);
 
-            // beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
-            //                        getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
+            //beam = new GLine (0, 0, 100, 100);
+
+            beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
+                                    getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
 
             add(beam);
 
