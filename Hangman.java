@@ -22,8 +22,8 @@ public class Hangman extends ConsoleProgram {
     public void run() {
         canvas.reset();
         //need to commit
-        //setupGame();
-        //playGame();
+        setupGame();
+        playGame();
 
     }
 
@@ -39,6 +39,9 @@ public class Hangman extends ConsoleProgram {
         println("Welcome to Hangman!");
         String currentForm = initCurrentForm();
         println ("The word now looks like this: " + currentForm);
+
+        canvas.displayWord(currentForm);
+
         String pickedLetter;
         int count = 8;          // player has eight chances
         println("You have " + count + " guesses left." );
@@ -69,6 +72,7 @@ public class Hangman extends ConsoleProgram {
                 } else {
                     println("That guess is correct.");
                     currentForm = updateTarget(currentForm, targetWord, pickedLetter);
+                    canvas.displayWord(currentForm);
                     if (currentForm.equals(targetWord)) {
                         println("You guessed the word: " + targetWord);
                         println("You win.");

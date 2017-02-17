@@ -21,8 +21,10 @@ public class HangmanCanvas extends GCanvas {
             rope = new GLine(getWidth()/2, 10, getWidth()/2, 10 + ROPE_LENGTH);
             add(rope);
 
-            current = new GLabel("Test", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+50);
+            // add the labels here so you can be confident how many objects there are on the canvas
+            current = new GLabel("", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+50);
             add(current);
+
             // drawHead();
             // drawBody();
             // drawLeftArm();
@@ -40,7 +42,7 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void displayWord(String word) {
 		/* You fill this in */
-
+            current.setLabel(word);
 	}
 
 /**
