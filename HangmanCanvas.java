@@ -32,7 +32,7 @@ public class HangmanCanvas extends GraphicsProgram {
             //                        getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
             beam.setVisible(true);
             beam.setColor(Color.BLACK);
-            canvas.add(beam);
+            add(beam);
             add(beam2);
 
 
