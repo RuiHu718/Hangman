@@ -62,9 +62,13 @@ public class HangmanCanvas extends GCanvas {
     }
 
     private void drawLeftArm() {
-        leftarm_1 = new GLine(getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
+        upperleftarm = new GLine(getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
                               getWidth()/2, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD);
-        add(leftarm_1);
+        add(upper_arm_length);
+
+        lowerleftarm = new GLine(getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
+                                 getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD+LOWER_ARM_LENGHT);
+        add(lowerleftarm);
     }
         
     
@@ -75,8 +79,8 @@ public class HangmanCanvas extends GCanvas {
         private GLine rope;
         private GOval head;
         private GLine body;
-        private GLine leftarm_1;
-       private GLine leftarm_2;
+        private GLine upperleftarm;
+        private GLine lowerleftarm;
 
     
 /* Constants for the simple version of the picture (in pixels) */
