@@ -26,6 +26,10 @@ public class HangmanCanvas extends GCanvas {
             drawBody();
             drawLeftArm();
             drawRightArm();
+            drawLeftLeg();
+            drawRightLeg();
+            drawLeftFoot();
+            drawRightFoot();
 	}
 
 /**
@@ -66,7 +70,6 @@ public class HangmanCanvas extends GCanvas {
         upperleftarm = new GLine(getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
                               getWidth()/2, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD);
         add(upperleftarm);
-
         lowerleftarm = new GLine(getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
                                  getWidth()/2-UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD+LOWER_ARM_LENGTH);
         add(lowerleftarm);
@@ -76,12 +79,28 @@ public class HangmanCanvas extends GCanvas {
         upperrightarm = new GLine(getWidth()/2, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
                                   getWidth()/2+UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD);
         add(upperrightarm);
-
         lowerrightarm = new GLine(getWidth()/2+UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
                                   getWidth()/2+UPPER_ARM_LENGTH, 10+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD+LOWER_ARM_LENGTH);
         add(lowerrightarm);
     }
-        
+
+    private void drawLeftLeg() {
+        lefthip = new GLine(getWidth()/2-HIP_WIDTH/2, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH,
+                            getWidth()/2, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH);
+        add(lefthip);
+    }
+
+    private void drawRightLeg() {
+
+    }
+
+    private void drawLeftFoot() {
+
+    }
+
+    private void drawRightFoot() {
+
+    }
     
 
 /* Instance variables */
@@ -94,6 +113,12 @@ public class HangmanCanvas extends GCanvas {
         private GLine lowerleftarm;
         private GLine upperrightarm;
         private GLine lowerrightarm;
+        private GLine lefthip;
+        private GLine righthip;
+        private GLine leftleg;
+        private GLine rightleg;
+        private GLine leftfoot;
+        private GLine rightfoot;
 
     
 /* Constants for the simple version of the picture (in pixels) */
