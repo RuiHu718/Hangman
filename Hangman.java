@@ -55,6 +55,7 @@ public class Hangman extends ConsoleProgram {
             if (targetWord.indexOf(pickedLetter.charAt(0)) == -1) {
                 println("There are no " + pickedLetter + " in the word.");
                 println("The word now looks like this: " + currentForm);
+                canvas.noteIncorrectGuess(pickedLetter.charAt(0));
                 count--;
                 if (count == 0) {
                     println("You are completely hung.");

@@ -22,9 +22,12 @@ public class HangmanCanvas extends GCanvas {
             add(rope);
 
             // add the labels here so you can be confident how many objects there are on the canvas
-            current = new GLabel("", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+50);
+            current = new GLabel("", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+50); // 50 here is arbitrary
             add(current);
 
+            guessed = new GLabel("Test", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+100);
+            add(guessed);
+            
             // drawHead();
             // drawBody();
             // drawLeftArm();
@@ -53,6 +56,8 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void noteIncorrectGuess(char letter) {
 		/* You fill this in */
+            guessedLetters += Character.toString(letter);
+            guessed.setLabel(guessedLetters);
 	}
 
 
@@ -137,6 +142,7 @@ public class HangmanCanvas extends GCanvas {
         private GLine rightfoot;
         private GLabel current;
         private GLabel guessed;
+        private String guessedLetters = "";
 
     
 /* Constants for the simple version of the picture (in pixels) */
