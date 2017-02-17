@@ -15,6 +15,7 @@ public class HangmanCanvas extends GCanvas {
 	public void reset() {
 
             // need to commit
+            // draw scaffold
             beam = new GLine (getWidth()/2, 10, getWidth()/2 - BEAM_LENGTH, 10); // num 10 is arbitrary here, will adjust later
             add(beam);
             scaffold = new GLine(getWidth()/2 - BEAM_LENGTH, 10, getWidth()/2 - BEAM_LENGTH, 10 + SCAFFOLD_HEIGHT);
@@ -25,7 +26,6 @@ public class HangmanCanvas extends GCanvas {
             // add the labels here so you can be confident how many objects there are on the canvas
             current = new GLabel("", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+50); // 50 here is arbitrary
             add(current);
-
             guessed = new GLabel("", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+100);
             add(guessed);
             
@@ -59,6 +59,11 @@ public class HangmanCanvas extends GCanvas {
 		/* You fill this in */
             guessedLetters += Character.toString(letter);
             guessed.setLabel(guessedLetters);
+
+            // the trick here is to keep track how many objects exists on the canvas so you know which part to draw next
+            if (getElementCount() == 5){
+                drawHead();
+            }
 	}
 
 
