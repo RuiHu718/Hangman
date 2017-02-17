@@ -20,8 +20,9 @@ public class Hangman extends ConsoleProgram {
     }
 
     public void run() {
-        setupGame();
-        playGame();
+        canvas.reset();
+        //setupGame();
+        //playGame();
 
     }
 
