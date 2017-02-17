@@ -14,14 +14,10 @@ public class HangmanCanvas extends GCanvas {
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
 
-            beam = new GLine (getWidth()/2, 10, getWidth()/2 - BEAM_LENGTH, 10);
-
-            //beam = new GLine(getWidth()/2, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH,
-            //                                    getWidth()/2 - BEAM_LENGTH, getHeight()/2 - LEG_LENGTH - BODY_LENGTH - 2*HEAD_RADIUS - ROPE_LENGTH);
-
+            beam = new GLine (getWidth()/2, 10, getWidth()/2 - BEAM_LENGTH, 10); // num 10 is arbitrary here, will adjust later
             add(beam);
-
-
+            scaffold = new GLine(getWidth()/2 - BEAM_LENGTH, 10, getWidth()/2 - BEAM_LENGTH, 10 + SCAFFOLD_HEIGHT);
+            add(scaffold);
 
 	}
 
@@ -46,8 +42,9 @@ public class HangmanCanvas extends GCanvas {
 
 
 /* Instance variables */
-    private HangmanCanvas canvas;
     private GLine beam;
+    private GLine scaffold;
+    private GLine rope;
 
     
 /* Constants for the simple version of the picture (in pixels) */
