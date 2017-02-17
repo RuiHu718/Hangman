@@ -6,23 +6,9 @@
  */
 
 import acm.graphics.*;
-import acm.program.*;
-import acm.util.*;
-import java.awt.*;
+
 
 public class HangmanCanvas extends GCanvas {
-
-    // for testing purpose
-    public void run() {
-         canvas = new HangmanCanvas();
-         add(canvas);
-         canvas.reset();
-        // println(canvas.getElementCount());
-
-        //beam = new GLine(0, 0, 100, 100);
-        //add(beam);
-    }
-
 
 
     
