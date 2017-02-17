@@ -23,6 +23,7 @@ public class HangmanCanvas extends GCanvas {
             add(rope);
 
             drawHead();
+            drawBody();
 	}
 
 /**
@@ -51,8 +52,12 @@ public class HangmanCanvas extends GCanvas {
     private void drawHead() {
         head = new GOval(getWidth()/2 - HEAD_RADIUS, 10 + ROPE_LENGTH, HEAD_RADIUS*2, HEAD_RADIUS*2);
         add(head);
-        
+    }
 
+    private void drawBody() {
+        body = new GLine(getWidth()/2, 10+ROPE_LENGTH+2*HEAD_RADIUS,
+                         getWidth()/2, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH);
+        add(body);
     }
         
     
@@ -62,6 +67,7 @@ public class HangmanCanvas extends GCanvas {
         private GLine scaffold;
         private GLine rope;
         private GOval head;
+        private GLine body;
 
     
 /* Constants for the simple version of the picture (in pixels) */
