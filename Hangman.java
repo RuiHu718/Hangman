@@ -19,12 +19,12 @@ public class Hangman extends ConsoleProgram {
         add(canvas);
     }
 
+
     public void run() {
         canvas.reset();
         //need to commit
         setupGame();
         playGame();
-
     }
 
 
@@ -35,7 +35,6 @@ public class Hangman extends ConsoleProgram {
 
 
     private void playGame() {
-
         println("Welcome to Hangman!");
         String currentForm = initCurrentForm();
         println ("The word now looks like this: " + currentForm);
@@ -90,7 +89,6 @@ public class Hangman extends ConsoleProgram {
 
     /* update the string in progress accordingly, replace '-' with correct letters */
     private String updateTarget(String current, String target, String letter) {
-
         String result = "";
 
         for (int i = 0; i < current.length(); i++) {
@@ -104,7 +102,6 @@ public class Hangman extends ConsoleProgram {
                 result = result + Character.toString(current.charAt(i));
             }
         }
-
         return result;
     }
     
@@ -112,7 +109,6 @@ public class Hangman extends ConsoleProgram {
     // gets user input of a single letter
     // check for input errors
     private String getUserInput() {
-
         String letter = readLine();
 
         // program will break if enter "enter" right away, how to catch this?
@@ -120,14 +116,12 @@ public class Hangman extends ConsoleProgram {
             println("Illegal input, input should be a single letter so try again.");
             letter = readLine();
         }
-
         return letter.toUpperCase();
     }
     
 
     // sets up the initial representation of the unguessed string
     private String initCurrentForm() {
-
         int wordLen = targetWord.length();
         String s = "";
 
@@ -149,13 +143,10 @@ public class Hangman extends ConsoleProgram {
 
     // object to get random word
     private HangmanLexicon hangmanLex = new HangmanLexicon();
-
     // to get random word
     private RandomGenerator rgen = RandomGenerator.getInstance();
-
     // random word choosen to be the game target
     private String targetWord;
-
     // canvas to draw 
     private HangmanCanvas canvas;
 

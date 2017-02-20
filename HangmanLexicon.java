@@ -3,6 +3,7 @@
  * -------------------------
  * This file contains a stub implementation of the HangmanLexicon
  * class that you will reimplement for Part III of the assignment.
+ * add this into git as well
  */
 
 import acm.util.*;

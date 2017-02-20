@@ -13,7 +13,6 @@ public class HangmanCanvas extends GCanvas {
 
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
-
             // draw scaffold
             beam = new GLine (getWidth()/2, 10, getWidth()/2 - BEAM_LENGTH, 10); // num 10 is arbitrary here, will adjust later
             add(beam);
@@ -22,7 +21,7 @@ public class HangmanCanvas extends GCanvas {
             rope = new GLine(getWidth()/2, 10, getWidth()/2, 10 + ROPE_LENGTH);
             add(rope);
 
-            // add the labels here so you can be confident how many objects there are on the canvas
+            // add the labels 
             current = new GLabel("", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+50); // 50 here is arbitrary
             add(current);
             guessed = new GLabel("", getWidth()/2-BEAM_LENGTH-20, 10+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH+100);
@@ -38,15 +37,16 @@ public class HangmanCanvas extends GCanvas {
             // drawRightFoot();
 	}
 
+    
 /**
  * Updates the word on the screen to correspond to the current
  * state of the game.  The argument string shows what letters have
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
 	public void displayWord(String word) {
-		/* You fill this in */
             current.setLabel(word);
 	}
+
 
 /**
  * Updates the display to correspond to an incorrect guess by the
@@ -55,23 +55,10 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(char letter) {
-		/* You fill this in */
             guessedLetters += Character.toString(letter);
             guessed.setLabel(guessedLetters);
 
-            // the trick here is to keep track how many objects exists on the canvas so you know which part to draw next
-            // switch (guessedLetters.length()) {
-            // case 1: drawHead();
-            // case 2: drawBody();
-            // case 3: drawLeftArm();
-            // case 4: drawRightArm();
-            // case 5: drawRightLeg();
-            // case 6: drawLeftLeg();
-            // case 7: drawLeftFoot();
-            // case 8: drawRightFoot();
-            // }
-
-            if (guessedLetters.length() == 1) drawHead();
+            if (guessedLetters.length() == 1) drawHead(); // the first wrong guess
             if (guessedLetters.length() == 2) drawBody();
             if (guessedLetters.length() == 3) drawLeftArm();
             if (guessedLetters.length() == 4) drawRightArm();
