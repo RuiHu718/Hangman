@@ -31,17 +31,14 @@ public class HangmanLexicon {
         
     }
 
-
-
-
-
     
-/** Returns the number of words in the lexicon. */
+    /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
             return wordList.size();
 	}
 
-/** Returns the word at the specified index. */
+
+    /** Returns the word at the specified index. */
 	public String getWord(int index) {
             return wordList.get(index);
 	}
